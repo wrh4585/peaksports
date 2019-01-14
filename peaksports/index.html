@@ -16,7 +16,7 @@
 <header>
     <div class="common_header">
         <span class="left_span">
-            <a href="javascript:">匹克官方网店</a>
+            <a href="index.html">匹克官方网店</a>
             <a href="javascript:">手机商城
                 <span class="shouj_img">
                    
@@ -24,8 +24,10 @@
             </a>
         </span>
         <div class="right_span">
-            <a href="javascript:">请登录</a>
-            <a href="javascript:">免费注册</a>
+            <a href="login.html" id="loading">请登录</a>
+            <a href="javascript:" id="loading_a"></a>
+            <a href="javascript:" id="removeId" style="display:none;">注销</a>
+            <a href="javascript:" id="free_reg">免费注册</a>
             <a href="javascript:">购物车<span>(0)</span></a>
             <a href="javascript:">我的订单</a>
             <div class="daohang_box">
@@ -48,7 +50,7 @@
             <img src="img/logo.png" alt="匹克官方网店" class="logoImg">
             <div class="searchDiv">
                 <input type="text">
-                <input type="button" value="搜索">
+                <input type="button" value="搜索" id="serch_id">
             </div>
             <a href="javascript:"><img src="img/fines.jpg" alt="VIP粉丝群" class="fansImg"></a>      
         </div>
@@ -159,7 +161,7 @@
                 </div>
             </div>
             <div class="nav_r_list">
-                <a href="javascript:">跑步</a>
+                <a href="ball.html">跑步</a>
                 <div class="nav_r_list_content">
                     <img src="img/paobu.jpg">
                     <div class="list_content_box">
@@ -233,13 +235,13 @@
                 <a href="javascript:">新品</a>
             </div>
             <div class="nav_r_list">
-                <a href="javascript:">企业团购</a>
+                <a href="groupbuying.html">企业团购</a>
             </div>
             <div class="nav_r_list">
                 <a href="javascript:">校服</a>
             </div>
             <div class="nav_r_list">
-                <a href="javascript:">大码鞋</a>
+                <a href="bigsize.html">大码鞋</a>
             </div>
             <div class="nav_r_list">
                 <a href="javascript:">优惠</a>
@@ -247,6 +249,54 @@
         </div>
     </div>
 </nav>
+<!-- 注册区域 -->
+<section class="reg_part">   
+    <div class="reg_div">
+        <div id="close_div"></div>
+        <div class="reg_div_option">
+            <a href="javascript:">登录会员</a>
+            <a href="javascript:">注册会员</a>
+        </div>
+        <div class="reg_div_fortherBox">
+            <div class="reg_div_zhuce" >
+                <input type="text" placeholder="请输入手机号" id="phone_input01">
+                <span class="phone_span">手机号输入有误，请输入正确的手机号码！</span>
+                <div class="yzm_div">
+                    <input type="text" placeholder="短信验证码" id="yzmInput01">
+                    <input type="button" value="发送短信验证码" id="send_yzmInput01">
+                </div>
+                <input type="password" placeholder="请输入注册密码" style="margin-top:5px;" id="user_pwd01">
+                <p class="mima_tips">密码由6-32位字符组成，建议由于数字、英文、字母组合</p>
+                <input type="password" placeholder="请确认注册密码" id="rewrite_pwd01">
+                <div class="xieyi_div">
+                    <input type="checkbox" checked/>我已同意并阅读协议
+                    <a href="javascript:">匹克会员注册协议</a>
+                </div>
+                <input type="button" id="reg_btn01" value="立即注册">
+                <!-- <a href="javascript:" id="tiaozhuan_dlu">已有匹克会员，现在登录</a> -->
+            </div>
+            <div class="reg_div_dlu" style="display:none;">
+                    <input type="text" placeholder="请输入手机号/用户名/邮箱">
+                    <input type="text" placeholder="请输入登录密码">
+                    <input type="button" id="login_input" value="立即登录">
+                    <!-- <br/> -->
+                    <div class="reg_div_dlu_a">
+                        <a href="javascript:">忘记密码</a>
+                        <a href="javascript:">线下激活会员</a>
+                    </div>
+            </div>
+        </div>
+        <div class="l_dright_bdiv">
+            <p>您也可以使用合作网站帐号登录</p>
+            <div class="partener_a">
+                <a href="javascript:" title="新浪微博"></a>
+                <a href="javascript:" title="支付宝"></a>
+                <a href="javascript:" title="腾讯QQ"></a>
+                <a href="javascript:" title="人人网"></a>          
+            </div>
+        </div>
+    </div>
+</section>
 <!-- 轮播图 -->
 <section class="slider">
     <div id="slideBox" class="slideBox">
@@ -352,7 +402,7 @@
                 </div>
             </div>
         </div>
-        <div class="fast_use_xijie"></div>
+        <div class="fast_use_xijie" id="go_toTop"></div>
     </div>    
 </section>
 <!-- 商品分类 -->
@@ -738,7 +788,8 @@
                     评测
             </span>
             <div class="ceping_slider">
-
+                <img src="img/weixin160x160.jpg" alt="">
+                <p>扫码查看匹克专业测评</p>
             </div>
         </div>
     </div>
@@ -817,13 +868,179 @@
 </footer>
 </body>
 </html>
-<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript">
+$().ready(function(){
     $(".slideBox").slide({
         mainCell: ".bd ul",
         effect:"leftLoop",
         autoPlay: true,
         delayTime:1500
     });
+    //滚动条事件
+    $(window).scroll(function(){
+        // console.log($(document).scrollTop());
+        if($(document).scrollTop()>300){
+            $("#go_toTop").css({display:"block"});
+        }else{    
+            $("#go_toTop").css({display:"none"});
+        }
+    })
+    // 回到顶部
+    $("#go_toTop").click(function(){
+        var speed=500;
+        $('body,html').animate({scrollTop:0},speed);
+    })
+//注册部分
+    //点击出现注册页面
+    $("#free_reg").click(function(){
+        $(".reg_part").css({display:"block",display:"flex",justifyContent:"center",alignItems:"center"});
+    });
+    //点击关闭注册页面
+    $("#close_div").click(function(){
+        $(".reg_part").css({display:"none"});
+    });
+    //手机号正则验证
+    $("#phone_input01").blur(function(){
+        if($("#phone_input01").val()!=""){
+            var phonereg = /^[1][3,4,5,7,8][0-9]{9}$/;
+            if(!phonereg.test($("#phone_input01").val())){
+                $(".phone_span").css({display:"block"});
+            }else{
+                $(".phone_span").css({display:"none"});
+            }
+        }
+    })
+    
+    // $("#phone_input01").blur(function(){
+    //     var phonereg = /^[1][3,4,5,7,8][0-9]{9}$/;
+    //     if(($("#phone_input01").val()!="") && (!(phonereg.test($("#phone_input01").val())!=false))){ 
+    //         let xhr = new XMLHttpRequest();
+    //         xhr.open('get','php/checkUser.php?userId='+$("#phone_input01").val(),true);
+    //         xhr.onreadystatechange = function(){
+    //             if(xhr.readyState == 4 && xhr.status == 200){ 
+    //                 if(xhr.responseText == "1"){
+    //                     $(".phone_span").css({color:"green",display:"block"});
+    //                     $(".phone_span").text("此号码可以使用，快去注册吧") 
+    //                 }else{
+    //                     $(".phone_span").css({display:"block"});
+    //                     $(".phone_span").text("此号码已被使用，请登录或者换个号码注册吧！")
+    //                 }
+    //             }
+    //         }
+    //         xhr.send();
+    //     }else{
+    //         $(".phone_span").css({display:"block"});
+    //     }    
+    // });
+
+    //密码格式验证
+    $("#user_pwd01").blur(function(){
+        var pwdreg = /\w{6,32}$/;
+        if(!pwdreg.test($("#user_pwd01").val())){
+            $(".mima_tips").css({color:"red"});
+        }else{
+            $(".mima_tips").css({color:"green"});
+        }
+    });
+    //两次密码一致验证
+    $('#rewrite_pwd01').blur(function(){
+    if($('#rewrite_pwd01').val()!=$('#user_pwd01').val()){
+            alert("亲，两次输入的密码不一致，请检查后重新输入！");
+        }
+    });
+// 验证手机号是否被注册
+    $("#phone_input01").blur(function(){
+        setTimeout(function(){
+            if($("#phone_input01").val()!=""){
+                let xhr = new XMLHttpRequest();
+                xhr.open('get','php/checkUser.php?userId='+$("#phone_input01").val(),true);
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4 && xhr.status == 200){ 
+                        if(xhr.responseText == "1"){
+                            $(".phone_span").css({color:"green",display:"block"});
+                            $(".phone_span").text("此号码可以使用，快去注册吧") 
+                        }else{
+                            $(".phone_span").css({display:"block"});
+                            $(".phone_span").text("此号码已被使用，请登录或者换个号码注册吧！")
+                        }
+                    }
+                }
+                xhr.send();
+            }   
+        },2000);
+    });
+
+//注册链接数据库
+$("#reg_btn01").click(function(){
+    if(($("#phone_input01").val()!="")&&($("#user_pwd01").val()!="")){
+        let xhr = new XMLHttpRequest();
+        xhr.open('post','php/addUser.php',true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                if(xhr.responseText == "1"){
+                    alert("恭喜您注册成功！");
+                    window.location.href="login.html";
+                }else{
+                    alert("此用户已经注册，赶紧去登录吧！");
+                }
+            }
+        }
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        let htmlstr="userId="+$("#phone_input01").val()+"&userPass="+$("#user_pwd01").val();
+        xhr.send(htmlstr);
+    }  
+})
+// console.log(document.cookie)
+$(function(){
+    if(document.cookie){
+        var w_word = getCookie("userId");
+        console.log(w_word);
+        let ttt = JSON.parse(w_word);
+        var w_w_result = ttt.userId;
+        $("#loading_a").html("欢迎您 : "+w_w_result+"!");
+        $("#loading_a").css({color:"green",marginLeft:"10px"});
+        $("#removeId").css({display:"block"});
+        $("#free_reg").css({display:"none"});
+        $("#loading").css({display:"none"});
+    }   
+})
+$(function(){
+    $("#removeId").click(function(){
+        removeCookie("userId");
+        window.location.href="index.html";
+        alert("您已注销登录，请重新登录！");
+    })
+})
+
+function addCookie(key,value,dayCount,path){
+    var d= new Date();
+    d.setDate(d.getDate()+dayCount);
+    var str = key+"="+escape(value)+";expires="+d.toGMTString();	
+    if(path!=undefined){
+        str+=";path="+path;	
+    }	
+    document.cookie = str;
+}
+function getCookie(key){
+	var str = unescape(document.cookie);
+	var arr = str.split("; ");
+	for(var i in arr){
+		if(arr[i].indexOf(key+"=") == 0){
+			return arr[i].substring((key+"=").length);
+		}
+	}	
+	return null;	
+}
+function removeCookie(key){
+	addCookie(key,"xx",-1);
+}
+
+$("#serch_id").click(function(){
+    window.location.href="initial.html";
+})
+
+});
+
 </script>

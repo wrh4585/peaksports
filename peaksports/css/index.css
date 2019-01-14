@@ -91,7 +91,7 @@ a {
 
 .nav_leftBox .fenleiBox {
   position: absolute;
-  z-index: 999;
+  z-index: 2;
   width: 205px;
   height: 480px;
   background-color: black;
@@ -545,5 +545,4 @@ a {
 .ceping_slider {
   width: 210px;
   height: 190px;
-  background-color: cyan;
   margin: 20px auto; }

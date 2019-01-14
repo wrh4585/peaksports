@@ -1,0 +1,97 @@
+@charset "UTF-8";
+body {
+  font: 14px/1.5 "Microsoft YaHei",sans-serif;
+  color: #333; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+html {
+  width: 100%; }
+
+body {
+  background-color: white;
+  font-size: 16px;
+  width: 100%;
+  height: 100%; }
+
+ol, ul {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+a {
+  text-decoration: none; }
+
+/*
+大码
+*/
+.big_size {
+  width: 100%;
+  height: 100%; }
+
+.big_size_shoes {
+  width: 1200px;
+  height: 406px;
+  margin: 0 auto;
+  border: 1px solid #333;
+  display: flex; }
+
+.big_size_shoesImg {
+  width: 540px;
+  height: 408px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.big_size_shoesImg a, .big_size_shoesImg img {
+  display: block;
+  width: 385px;
+  height: 385px; }
+
+.big_size_shoesMsg {
+  flex: 1; }
+
+.b_shoeseMsg_under {
+  width: 300px;
+  height: 2px;
+  background-color: #adadad; }
+
+.big_size_shoesMsg p {
+  width: 558px;
+  line-height: 28px;
+  color: #bebebe;
+  font-size: 18px;
+  margin-top: 22px; }
+
+.big_size_shoesMsg .b_shoesMsg_p {
+  margin-bottom: 15px; }
+
+.big_size_shoesMsg h1 {
+  width: 558px;
+  line-height: 72px;
+  font-size: 24px; }
+
+.size_span {
+  margin-bottom: 5px;
+  display: inline-block;
+  height: 46px;
+  width: 46px;
+  border: 1px solid #adadad;
+  font-size: 18px;
+  line-height: 46px;
+  text-align: center; }
+
+.big_shoes_buySpan {
+  display: block;
+  width: 150px;
+  height: 48px;
+  background-color: black;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+  color: white;
+  cursor: pointer; }

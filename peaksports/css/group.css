@@ -1,0 +1,118 @@
+@charset "UTF-8";
+body {
+  font: 14px/1.5 "Microsoft YaHei",sans-serif;
+  color: #333; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+html {
+  width: 100%; }
+
+body {
+  background-color: white;
+  font-size: 16px;
+  width: 100%;
+  height: 100%; }
+
+ol, ul {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+a {
+  text-decoration: none; }
+
+/*团购内容区域*/
+.group_buy_box {
+  height: 100%; }
+
+.group_buy_sonBox {
+  width: 1260px;
+  height: 100%;
+  margin: 10px auto; }
+
+.g_sonBox_01 {
+  text-align: center; }
+
+.g_sonBox_01btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.g_sonBox_smallBox {
+  width: 290px;
+  height: 320px;
+  text-align: center; }
+
+.color_div {
+  width: 50px;
+  height: 4px;
+  background-color: #e80000;
+  margin: 0 auto; }
+
+.g_sonBox_smallBox h1 {
+  font-size: 24px; }
+
+.g_sonBox_smallBox p {
+  font-size: 22px;
+  height: 33px;
+  color: #999999; }
+
+.g_sonBox_02top {
+  width: 100%; }
+
+.g_sonBox_02top a {
+  display: block;
+  width: 290px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: #e80000;
+  font-size: 24px;
+  line-height: 80px;
+  text-align: center;
+  color: white;
+  margin: 0 auto; }
+
+.g_sonBox_02btm01 {
+  height: 861px;
+  background: url(../img/grouppart1.jpg) center top no-repeat;
+  margin-top: 10px; }
+
+.g_sonBox_03 {
+  height: 861px;
+  background: url(../img/grouppart2.jpg) center top no-repeat;
+  margin-top: 10px; }
+
+.g_sonBox_04 {
+  height: 796px;
+  background: url(../img/grouppart3.jpg) center top no-repeat;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 84px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start; }
+
+.g_sonBox_04neirong {
+  width: 590px;
+  height: 235px;
+  text-align: left; }
+
+.g_sonBox_04neirong h1 {
+  width: 468px;
+  font-size: 24px;
+  line-height: 60px;
+  color: #7f7f7f;
+  margin: 20px auto 0px; }
+
+.g_sonBox_04neirong p {
+  width: 468px;
+  font-size: 18px;
+  line-height: 36px;
+  color: #7f7f7f;
+  margin: 0 auto; }

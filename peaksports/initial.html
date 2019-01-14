@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>匹克官方网店|匹克官方商城 - I CAN PLAY!斗志改未知!</title>
+    <title>匹克官方网店</title> 
     <meta name="description" content="匹克官方网店-匹克品牌自营网上专卖：匹克篮球鞋，匹克运动鞋，匹克运动服，匹克休闲鞋，匹克休闲服等于匹克体育装配。匹克将打造中国体育网上商城第一品牌！">
     <meta name="keywords" content="匹克,匹克官网,匹克官方网店,匹克官方商城">
     <link rel="stylesheet" href="css/commonheaderAndfooter.css">
-    <link rel="stylesheet" href="css/run.css">
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="css/initial.css">
     <link rel="shortcut icon" href="bitbug_favicon.ico"/>
 </head>
 <body>
@@ -19,9 +18,7 @@
         <span class="left_span">
             <a href="index.html">匹克官方网店</a>
             <a href="javascript:">手机商城
-                <span class="shouj_img">
-                   
-                </span>
+                <span class="shouj_img"></span>
             </a>
         </span>
         <div class="right_span">
@@ -47,7 +44,6 @@
         </div>
     </div>
 </header>
-<!-- 导航 -->
 <nav class="nav_box">
     <div class="nav_b_detail">
         <div class="logo_box">
@@ -182,7 +178,7 @@
                                     <a href="javascript:">运动裤</a>
                                 </div>
                             </div>
-                          
+                            
                             <div class="l_content_juti">
                                 <a href="javascript:" class="title_a" style="border-bottom:none;">热门</a>
                                 <div class="neirong_a">
@@ -251,10 +247,61 @@
         </div>
         <div class="nav_box_right">
             <input type="text">
-            <input type="button" class="serch_img" >
+            <input type="button" class="serch_img" id="serch_input">
         </div>
     </div>
 </nav>
+<!-- 注册区域 -->
+<section class="reg_part">   
+    <div class="reg_div">
+        <div id="close_div"></div>
+        <div class="reg_div_option">
+            <a href="javascript:">登录会员</a>
+            <a href="javascript:">注册会员</a>
+        </div>
+        <div class="reg_div_fortherBox">
+            <div class="reg_div_zhuce" >
+                <input type="text" placeholder="请输入手机号" id="phone_input01">
+                <span class="phone_span">手机号输入有误，请输入正确的手机号码！</span>
+                <div class="yzm_div">
+                    <input type="text" placeholder="短信验证码" id="yzmInput01">
+                    <input type="button" value="发送短信验证码" id="send_yzmInput01">
+                </div>
+                <input type="password" placeholder="请输入注册密码" style="margin-top:5px;" id="user_pwd01">
+                <p class="mima_tips">密码由6-32位字符组成，建议由于数字、英文、字母组合</p>
+                <input type="password" placeholder="请确认注册密码" id="rewrite_pwd01">
+                <div class="xieyi_div">
+                    <input type="checkbox" checked/>我已同意并阅读协议
+                    <a href="javascript:">匹克会员注册协议</a>
+                </div>
+                <input type="button" id="reg_btn01" value="立即注册">
+                <!-- <a href="javascript:" id="tiaozhuan_dlu">已有匹克会员，现在登录</a> -->
+            </div>
+            <div class="reg_div_dlu" style="display:none;">
+                    <input type="text" placeholder="请输入手机号/用户名/邮箱">
+                    <input type="text" placeholder="请输入登录密码">
+                    <input type="button" id="login_input" value="立即登录">
+                    <!-- <br/> -->
+                    <div class="reg_div_dlu_a">
+                        <a href="javascript:">忘记密码</a>
+                        <a href="javascript:">线下激活会员</a>
+                    </div>
+            </div>
+        </div>
+        <div class="l_dright_bdiv">
+            <p>您也可以使用合作网站帐号登录</p>
+            <div class="partener_a">
+                <a href="javascript:" title="新浪微博"></a>
+                <a href="javascript:" title="支付宝"></a>
+                <a href="javascript:" title="腾讯QQ"></a>
+                <a href="javascript:" title="人人网"></a>          
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 上部大图 -->
+<!-- <section class="top_bigImg" style="background:url(img/themebigsize.jpg) -50px 0px no-repeat;height: 480px;"> -->
+</section>
 <!-- 右侧快捷栏 -->
 <section class="fast_use">
     <div class="fast_use_bBox">
@@ -308,192 +355,128 @@
         <div class="fast_use_xijie" id="go_toTop"></div>
     </div>    
 </section>
-<!-- 注册区域 -->
-<section class="reg_part">   
-    <div class="reg_div">
-        <div id="close_div"></div>
-        <div class="reg_div_option">
-            <a href="javascript:">登录会员</a>
-            <a href="javascript:">注册会员</a>
+<!-- 商品详细 -->
+<section class="init_goods">
+    <div class="init_fatherBox">
+        <div class="init_header_box">
+            <span class="init_hb_span">
+                <a href="javascript:">首页</a>&nbsp;&gt;
+                <a href="javascript:">全部商品</a>&nbsp;&gt;
+                <span href="javascript:" class="screh_result">搜索结果</span>&nbsp;&gt;       
+            </span>
         </div>
-        <div class="reg_div_fortherBox">
-            <div class="reg_div_zhuce" >
-                <input type="text" placeholder="请输入手机号" id="phone_input01">
-                <span class="phone_span">手机号输入有误，请输入正确的手机号码！</span>
-                <div class="yzm_div">
-                    <input type="text" placeholder="短信验证码" id="yzmInput01">
-                    <input type="button" value="发送短信验证码" id="send_yzmInput01">
+        <div class="init_shaixuan_box">
+            <div class="init_shaibox">
+                <div class="init_shaibox_totaldiv">大类</div>
+                <span class="init_shaibox_span">
+                    <a href="javascript:">鞋子</a>
+                    <a href="javascript:">服装</a>
+                    <a href="javascript:">配件</a>
+                </span>
+            </div>
+            <div class="init_shaibox">
+                <div class="init_shaibox_totaldiv">价格</div>
+                <span class="init_shaibox_span">
+                    <a href="javascript:">0-139</a>
+                    <a href="javascript:">140-199</a>
+                    <a href="javascript:">200-299</a>
+                    <a href="javascript:">300-399</a>
+                    <a href="javascript:">400-499</a>
+                    <a href="javascript:">500-599</a>
+                    <input type="text">
+                    --
+                    <input type="text">
+                    <input type="button" value="搜索" id="init_sbox_serchInput">
+                </span>
+            </div>
+            <div class="init_shaibox">
+                <div class="init_shaibox_totaldiv">季节</div>
+                <span class="init_shaibox_span">
+                    <a href="javascript:">春季</a>
+                    <a href="javascript:">夏季</a>
+                    <a href="javascript:">秋季</a>
+                    <a href="javascript:">冬季</a>
+                </span>
+            </div>
+            <div class="init_shaibox">
+                <div class="init_shaibox_totaldiv">性别</div>
+                <span class="init_shaibox_span">
+                    <a href="javascript:">男性</a>
+                    <a href="javascript:">女性</a>
+                </span>
+            </div>
+            <div class="init_shaibox">
+                <div class="init_shaibox_totaldiv">尺码</div>
+                <span class="init_shaibox_span">
+                    <a href="javascript:">S</a>
+                    <a href="javascript:">M</a>
+                    <a href="javascript:">L</a>
+                    <a href="javascript:">XL</a>
+                    <a href="javascript:">2XL</a>
+                    <a href="javascript:">3XL</a>
+                    <a href="javascript:">36</a>
+                    <a href="javascript:">37</a>
+                    <a href="javascript:">38</a>
+                    <a href="javascript:">39</a>
+                    <a href="javascript:">40</a>
+                    <a href="javascript:">41</a>
+                    <a href="javascript:">42</a>
+                    <a href="javascript:">43</a>
+                    <a href="javascript:">44</a>
+                </span>
+            </div>
+        </div>
+        <div class="init_paixu_box">
+            <span class="init_pb_span">
+                <a href="javascript:">默认</a>
+                <a href="javascript:">人气<span></span></a>
+                <a href="javascript:">销量<span></span></a>
+                <a href="javascript:">价格<span></span></a>
+                <a href="javascript:">新品<span></span></a>                
+            </span>
+        </div>
+        <div class="init_goods_detial">
+            <!-- <div class="init_gd_symple">
+                <div class="init_gd_imgbox">
+                    <img src="img/x1546589418283_3552_x_290_x_290.jpg" alt="" title="">
+                    <div id="goods_cartbox"></div>
                 </div>
-                <input type="password" placeholder="请输入注册密码" style="margin-top:5px;" id="user_pwd01">
-                <p class="mima_tips">密码由6-32位字符组成，建议由于数字、英文、字母组合</p>
-                <input type="password" placeholder="请确认注册密码" id="rewrite_pwd01">
-                <div class="xieyi_div">
-                    <input type="checkbox" checked/>我已同意并阅读协议
-                    <a href="javascript:">匹克会员注册协议</a>
+                <div class="init_gd_chooseImg">
+                    <img src="img/x1546494656973_1149_x_30_x_30.jpg" alt="">
+                    <img src="img/x1545989178293_1256_x_30_x_30.jpg" alt="">
+                    <img src="img/x1545987726584_4101_x_30_x_30.jpg" alt="">
                 </div>
-                <input type="button" id="reg_btn01" value="立即注册">
-                <!-- <a href="javascript:" id="tiaozhuan_dlu">已有匹克会员，现在登录</a> -->
-            </div>
-            <div class="reg_div_dlu" style="display:none;">
-                    <input type="text" placeholder="请输入手机号/用户名/邮箱">
-                    <input type="text" placeholder="请输入登录密码">
-                    <input type="button" id="login_input" value="立即登录">
-                    <!-- <br/> -->
-                    <div class="reg_div_dlu_a">
-                        <a href="javascript:">忘记密码</a>
-                        <a href="javascript:">线下激活会员</a>
-                    </div>
-            </div>
+                <div class="goods_nameBox">女子时尚清新轻逸跑鞋 &nbsp;<span>DH910012</span>
+                   </div>
+                <div class="init_jiageBox">
+                    <span class="init_xianjia_span">￥299</span>
+                    <span class="init_yuanjian_span">￥399</span>
+                </div>
+            </div> -->
         </div>
-        <div class="l_dright_bdiv">
-            <p>您也可以使用合作网站帐号登录</p>
-            <div class="partener_a">
-                <a href="javascript:" title="新浪微博"></a>
-                <a href="javascript:" title="支付宝"></a>
-                <a href="javascript:" title="腾讯QQ"></a>
-                <a href="javascript:" title="人人网"></a>          
-            </div>
-        </div>
-    </div>
-</section>
-<!-- 上部大图 -->
-<section class="top_bigImg" style="background:url(img/yuepao1920.jpg) -300px 0px no-repeat;">
-    <!-- <img src="img/basketball2018.jpg" alt="帕克6代"> -->
-</section>
-<!-- 内容区域 -->
-<section class="content_boxForRun">
-    <div class="content_detail_div">
-        <a href="javascript:" class="cont_detail_div_a"><img src="img/part1.png" alt=""></a>
-        <div class="cont_detail_div_msg">
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/more1.png" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <div class="content_detail_div">
-        <a href="javascript:" class="cont_detail_div_a"><img src="img/part2.png" alt=""></a>
-        <div class="cont_detail_div_msg">
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/more2.png" alt=""></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="content_detail_div">
-        <a href="javascript:" class="cont_detail_div_a"><img src="img/part3.png" alt=""></a>
-        <div class="cont_detail_div_msg">
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/x1528788179157_8677_x_252_x_252.jpg" alt=""></a>
-                <a href="javascript:">女子韩版网面透气轻便跑鞋</a>
-                <a href="javascript:">￥159.00</a>
-            </div>
-            <div class="cont_ddm_box">
-                <a href="javascript:"><img src="img/more3.png" alt=""></a>
-            </div>
+        <div class="init_tiaozhuan_box">
+            <a href="javascript:" class="page_button_a">1</a>
+            <a href="javascript:" class="page_button_a">2</a>
+            <a href="javascript:" class="page_button_a">3</a>
+            <a href="javascript:" class="page_button_a">4</a>
+            <a href="javascript:" class="page_button_a">5</a>
+            <a href="javascript:" class="page_button_a">6</a>
+            <a href="javascript:" class="page_button_a">7</a>
+            <a href="javascript:" class="page_button_a">…</a>
+            <a href="javascript:" class="page_button_a">下一页</a>
+            <span>至</span>
+            <input type="text" value="1" id="tiaozhuan_input">
+            <span> 页</span>
+            <input type="button" value="确定" id="qued_input">
+            <span>本次的搜索结果约</span>
+            <span id="total_tiaoshu">520</span>
+            <span>条</span>
+            <span>共</span>
+            <span id="total_yeshu">20</span>
+            <span>页</span>
         </div>
     </div>
 </section>
-
 <!-- 服务快捷方式 -->
 <section class="fast_server">
     <div class="fast_s_as">
@@ -572,6 +555,7 @@
 <script type="text/javascript">
 $().ready(function(){
     $(window).scroll(function(){
+        // console.log($(document).scrollTop());
         if($(document).scrollTop()>300){
             $("#go_toTop").css({display:"block"});
         }else{    
@@ -582,7 +566,6 @@ $().ready(function(){
         var speed=500;
         $('body,html').animate({scrollTop:0},speed);
     })
-
 //注册部分
     //点击出现注册页面
     $("#free_reg").click(function(){
@@ -678,7 +661,8 @@ $(function(){
 $(function(){
     $("#removeId").click(function(){
         removeCookie("userId");
-        window.location.href="index.html";
+        // window.location.href="index.html";
+        window.location.reload();
         alert("您已注销登录，请重新登录！");
     })
 })
@@ -705,11 +689,47 @@ function getCookie(key){
 function removeCookie(key){
 	addCookie(key,"xx",-1);
 }
-
+//后台获取商品信息
+$(function(){
+	let json={};
+	let str="";
+	let goodsMsg;
+	let heji=0;
+	$.ajax({
+        url:'php/getGoodsList.php',
+        type:'post',
+        dataType:'json',
+        success:function(data){
+           json=data;
+           console.log(json)      
+           $.each(json,function(i,obj){
+           	  //str="<p><a href=><img src="+obj.goodsImg+">"+obj.goodsName+"</a><i><b>"+obj.goodsPrice+"</b><b>*</b><b>"+obj.goodsCount+"</b></i><button>删除</button></p>";
+                str=`<div class="init_gd_symple">
+                        <div class="init_gd_imgbox">
+                            <img src="${obj.goodsImg}" alt="${obj.goodsDesc}" title="${obj.goodsDesc}">
+                            <div id="goods_cartbox"></div>
+                        </div>
+                        <div class="init_gd_chooseImg">
+                            <img src="${obj.beiyong1}" alt="" title="">
+                            <img src="${obj.beiyong2}" alt="" title="">
+                            <img src="${obj.beiyong3}" alt="" title="">
+                        </div>
+                        <div class="goods_nameBox">${obj.goodsName} &nbsp;<span>${obj.goodsId}</span>
+                        </div>
+                        <div class="init_jiageBox">
+                            <span class="init_xianjia_span">￥${obj.goodsPrice}</span>
+                            <span class="init_yuanjian_span">￥${obj.beiyong4}</span>
+                        </div>
+                    </div>`; 
+                goodsMsg=$(str);
+           	   $(".init_goods_detial").append(goodsMsg);
+           });
+        }
+    })
+})   
 $(".serch_img").click(function(){
     window.location.href="initial.html";
 })
-
 
 });
 </script>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font: 14px/1.5 "Microsoft YaHei",sans-serif;
   color: #333; }
@@ -264,6 +265,201 @@ header {
   border: 1px solid #e80000;
   background: url(../img/search.png) 3px 6px no-repeat; }
 
+/*
+注册页面
+*/
+.reg_part {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: #7f7f7f;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none; }
+
+.reg_div {
+  width: 410px;
+  height: 470px;
+  background-color: white;
+  position: relative; }
+
+.reg_div_option {
+  height: 40px;
+  display: flex; }
+
+.reg_div_option a {
+  width: 205px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  background-color: #e80000; }
+
+.reg_div_option a:nth-child(1) {
+  background-color: #999999; }
+
+.reg_div_fortherBox {
+  width: 300px;
+  height: 330px;
+  margin: 10px auto; }
+
+#close_div {
+  width: 28px;
+  height: 28px;
+  background-color: #f5f5f5;
+  background: url(../img/close.png) 0px 0px no-repeat;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: -40px; }
+
+.reg_div_zhuce {
+  width: 300px;
+  height: 330px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
+.reg_div_zhuce input {
+  display: block;
+  height: 33px;
+  width: 280px; }
+
+.reg_div_zhuce .phone_span {
+  font-size: 12px;
+  color: #e80000;
+  display: none; }
+
+.reg_div_zhuce .yzm_div {
+  width: 283px;
+  height: 33px;
+  display: flex; }
+
+.reg_div_zhuce .yzm_div input {
+  width: 140px;
+  height: 33px; }
+
+.reg_div_zhuce p {
+  width: 280px;
+  font-size: 10px;
+  color: #999999; }
+
+.reg_div_zhuce .xieyi_div {
+  display: flex;
+  width: 250px;
+  font-size: 12px;
+  height: 16px;
+  margin-top: 10px; }
+
+.reg_div_zhuce .xieyi_div input {
+  width: 12px;
+  height: 12px;
+  margin-top: 4px; }
+
+.reg_div_zhuce .xieyi_div a {
+  display: inline-block;
+  font-size: 12px;
+  color: #e80000;
+  margin-left: 5px; }
+
+.reg_div_zhuce .xieyi_div a:hover {
+  text-decoration: underline; }
+
+#send_yzmInput, #reg_btn, #send_yzmInput01, #reg_btn01 {
+  height: 37px;
+  color: white;
+  background-color: #e80000;
+  border: 1px solid #e80000; }
+
+#tiaozhuan_dlu {
+  color: #999999;
+  font-size: 12px; }
+
+#tiaozhuan_dlu:hover {
+  color: #e80000;
+  text-decoration: underline; }
+
+.reg_div_dlu {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.reg_div_dlu input {
+  display: block;
+  height: 30px;
+  width: 280px;
+  padding-left: 5px;
+  outline: #999999; }
+
+.reg_div_dlu input {
+  margin-top: 20px; }
+
+.reg_div_dlu #login_input {
+  display: block;
+  height: 30px;
+  width: 288px;
+  background-color: #e80000;
+  border: 1px solid #e80000;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.reg_div_dlu .reg_div_dlu_a a {
+  display: inline-block;
+  font-size: 12px;
+  width: 140px;
+  height: 30px;
+  color: #999999;
+  text-align: center; }
+
+.reg_div_dlu .reg_div_dlu_a a:hover {
+  color: #e80000;
+  text-decoration: underline; }
+
+.l_dright_bdiv {
+  border-top: 1px dashed #999999; }
+
+.l_dright_bdiv p {
+  font-size: 12px;
+  color: #999999;
+  text-align: center;
+  margin: 10px auto; }
+
+.partener_a {
+  width: 150px;
+  height: 41px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.l_dright_bdiv .partener_a a {
+  width: 28px;
+  height: 26px;
+  background: url(../img/buttonLoginICON_95x23.png) no-repeat; }
+
+.l_dright_bdiv .partener_a a:nth-child(1) {
+  background-position: -1px -1px; }
+
+.l_dright_bdiv .partener_a a:nth-child(2) {
+  background-position: -1px -26px; }
+
+.l_dright_bdiv .partener_a a:nth-child(3) {
+  background-position: -1px -51px; }
+
+.l_dright_bdiv .partener_a a:nth-child(4) {
+  background-position: -1px -101px; }
+
 .fast_use {
   width: 35px;
   height: 1500px;
@@ -496,6 +692,9 @@ header {
   display: inline-block;
   height: 40px;
   margin: 5px 0px 0px 5px; }
+
+.f_b_tBox a:nth-child(2) img:hover {
+  transform: scale(1.2); }
 
 .f_b_tBox a:last-child {
   color: #999999;
