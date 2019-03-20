@@ -436,7 +436,7 @@
             </span>
         </div>
         <div class="init_goods_detial">
-            <!-- <div class="init_gd_symple">
+            <div class="init_gd_symple">
                 <div class="init_gd_imgbox">
                     <img src="img/x1546589418283_3552_x_290_x_290.jpg" alt="" title="">
                     <div id="goods_cartbox"></div>
@@ -452,7 +452,7 @@
                     <span class="init_xianjia_span">￥299</span>
                     <span class="init_yuanjian_span">￥399</span>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="init_tiaozhuan_box">
             <a href="javascript:" class="page_button_a">1</a>
@@ -553,7 +553,7 @@
 </html>
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-$().ready(function(){
+$(document).ready(function(){
     $(window).scroll(function(){
         // console.log($(document).scrollTop());
         if($(document).scrollTop()>300){
@@ -701,8 +701,10 @@ $(function(){
         dataType:'json',
         success:function(data){
            json=data;
+           n=0;
            console.log(json)      
            $.each(json,function(i,obj){
+               n++;
            	  //str="<p><a href=><img src="+obj.goodsImg+">"+obj.goodsName+"</a><i><b>"+obj.goodsPrice+"</b><b>*</b><b>"+obj.goodsCount+"</b></i><button>删除</button></p>";
                 str=`<div class="init_gd_symple">
                         <div class="init_gd_imgbox">
@@ -723,13 +725,20 @@ $(function(){
                     </div>`; 
                 goodsMsg=$(str);
            	   $(".init_goods_detial").append(goodsMsg);
+                 
+                if(n==json.length){
+                    $(".init_gd_imgbox").click(function(){
+                            
+                            window.location.href="goodsDetial.html";
+                        })
+                    }
+
            });
         }
     })
 })   
-$(".serch_img").click(function(){
-    window.location.href="initial.html";
-})
 
 });
+
+// console.log($(".init_gd_imgbox"))
 </script>

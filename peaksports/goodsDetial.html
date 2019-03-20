@@ -371,16 +371,33 @@
             <div class="goods_db_xiangxi">
                 <div class="goods_tupian_box">
                     <div class="tupian_show_box1">
-                        <div class="tupian_mirror_box"></div>
+                        <img src="img/x15470-1_m_1.jpg">
+                        
                     </div>
-                    <div class="tupian_show_box2"></div>
+                    <div class="tupian_mirror_box"></div>
+                    <div class="zhezhao"></div>
+                    <div class="tupian_show_box2">
+                        <img src="img/x15470-1_b_1.jpg">
+                    </div>
                     <div class="tupian_show_box3">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span>
+                            <img src="img/x15470-1_x_1.jpg">
+                        </span>
+                        <span>
+                            <img src="img/x15470-2_x_1.jpg">
+                        </span>
+                        <span>
+                            <img src="img/x15470-3_x_1.jpg">
+                        </span>
+                        <span>
+                            <img src="img/x15470-4_x_1.jpg">
+                        </span>
+                        <span>
+                            <img src="img/x15470-5_x_1.jpg">
+                        </span>
+                        <span>
+                            <img src="img/x15470-6_x_1.jpg">
+                        </span>
                     </div>
                 </div>
                 <div class="goods_miaoshu_box">
@@ -742,6 +759,74 @@
         $(".serch_img").click(function () {
             window.location.href = "initial.html";
         })
-
+       
+        goodsMirror();
     });
+
+    function goodsMirror(){
+        // 商品信息放大镜
+        // $(".tupian_show_box1").mouseover(function(){
+        //     $(".tupian_mirror_box").css("display","block");
+        //     $(".tupian_show_box2").css("display","block");
+        // })
+        
+        // $(".tupian_show_box1").mouseout(function(){
+        //     $(".tupian_mirror_box").css("display","none");
+        //     $(".tupian_show_box2").css("display","none");
+        // })
+        $(".tupian_show_box3 span").eq(0).css("border","2px solid #e80000");
+
+        // $(".tupian_show_box1").mouseover(function(){
+        //     $(".tupian_mirror_box").show();
+        //     $(".tupian_show_box2").show();
+        // })
+        
+
+        // $(".tupian_show_box1").mouseout(function(){
+        //     $(".tupian_mirror_box").hide();
+        //     $(".tupian_show_box2").hide();
+        // })
+        $(".zhezhao").mousemove(function(e){
+            $(".tupian_mirror_box").show();
+            $(".tupian_show_box2").show();
+
+            var left = e.offsetX-parseInt($(".tupian_mirror_box").width()) /2;
+            var top = e.offsetY-parseInt($(".tupian_mirror_box").height()) /2;
+            left =left<0?0:left;
+            left = left>(parseInt($(".tupian_show_box1").outerWidth()) - parseInt($(".tupian_mirror_box").outerWidth()))?(parseInt($(".tupian_show_box1").outerWidth()) - parseInt($(".tupian_mirror_box").outerWidth())):left;
+
+            top = top<0?0:top;
+            top = top>(parseInt($(".tupian_show_box1").outerHeight()) - parseInt($(".tupian_mirror_box").outerHeight()))?(parseInt($(".tupian_show_box1").outerHeight()) - parseInt($(".tupian_mirror_box").outerHeight())):top;
+            $(".tupian_mirror_box").css("left",left+"px");
+            $(".tupian_mirror_box").css("top",top+"px");
+
+            var leftRate = left / parseInt($(".tupian_show_box1").outerWidth());
+            var bigLeft = leftRate * parseInt($(".tupian_show_box2").outerWidth());
+            $(".tupian_show_box2 img").css("margin-left",-bigLeft+"px");
+
+            var topRate = top / parseInt($(".tupian_show_box1").outerHeight());
+            var bigTop = topRate * parseInt($(".tupian_show_box2").outerHeight());
+            $(".tupian_show_box2 img").css("margin-top",-bigTop+"px");
+        });
+
+        $(".zhezhao").mouseleave(function(){
+            $(".tupian_mirror_box").hide();
+            $(".tupian_show_box2").hide();
+        })
+        $(".tupian_show_box3 span").mouseover(function(){
+            // console.log(this)
+            $(this).css("border","2px solid #e80000").siblings().css("border","2px solid transparent");
+            // $(".tupian_show_box1 img").eq(0).attr("src",$(this).find("img").attr("src"));
+            $(".tupian_show_box1 img").eq(0).attr("src","img/x15470-"+($(this).index()+1)+"_m_1.jpg");
+            // console.log($(this).index()+1);
+            $(".tupian_show_box2 img").eq(0).attr("src","img/x15470-"+($(this).index()+1)+"_b_1.jpg")
+            // $(".tupian_show_box1 img").eq(0).css("width",448+"px");
+            // $(".tupian_show_box1 img").eq(0).css("height",448+"px");
+            // console.log( ($(this).find("img").attr("src").split(".")[0]).substr(-1));
+
+        })
+
+    }
+ 
+
 </script>
